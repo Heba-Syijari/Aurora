@@ -2,7 +2,6 @@ import { Stack, Typography } from '@mui/material';
 import { styled } from '@mui/material/styles';
 import { useSettingsContext } from 'src/components/settings';
 import { useResponsive } from 'src/hooks/use-responsive';
-import { RouterLink } from 'src/routes/components';
 
 // ----------------------------------------------------------------------
 
@@ -34,10 +33,10 @@ export default function Footer() {
       <Typography variant="body2">All rights reserved &copy; Aurora 2025.</Typography>
 
       <Stack spacing={1.25} flexDirection="row">
-        <Typography
+        {/* <Typography
           variant="body2"
           component={RouterLink}
-          href="https://staging.spreadislam.ai/terms-of-use/"
+          href=""
           sx={{ textDecoration: 'none', color: 'inherit' }}
         >
           Terms of use
@@ -48,11 +47,11 @@ export default function Footer() {
         <Typography
           variant="body2"
           component={RouterLink}
-          href="https://staging.spreadislam.ai/privacy-policy/"
+          href=""
           sx={{ textDecoration: 'none', color: 'inherit' }}
         >
           Privacy Policy
-        </Typography>
+        </Typography> */}
       </Stack>
     </FooterEl>
   );

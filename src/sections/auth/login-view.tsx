@@ -1,21 +1,21 @@
 'use client';
 
-import * as Yup from 'yup';
-import { useForm } from 'react-hook-form';
-import { useState } from 'react';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { Link, Alert, Stack, IconButton, Typography, InputAdornment, Divider } from '@mui/material';
 import { LoadingButton } from '@mui/lab';
-import { paths } from 'src/routes/paths';
-import { RouterLink } from 'src/routes/components';
-import { useSearchParams } from 'src/routes/hook';
+import { Alert, Divider, IconButton, InputAdornment, Link, Stack, Typography } from '@mui/material';
+import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { useAuthContext, useResendVerificationEmail } from 'src/auth/hooks';
+import { FormGroup } from 'src/components/custom/form-group';
+import FormProvider, { RHFTextField } from 'src/components/hook-form';
+import Iconify from 'src/components/iconify';
+import { BaseLoadingButton } from 'src/components/styled/button';
 import { PATH_AFTER_LOGIN } from 'src/config-global';
 import { useBoolean } from 'src/hooks/use-boolean';
-import { useAuthContext, useResendVerificationEmail } from 'src/auth/hooks';
-import Iconify from 'src/components/iconify';
-import FormProvider, { RHFTextField } from 'src/components/hook-form';
-import { FormGroup } from 'src/components/custom/form-group';
-import { BaseLoadingButton } from 'src/components/styled/button';
+import { RouterLink } from 'src/routes/components';
+import { useSearchParams } from 'src/routes/hook';
+import { paths } from 'src/routes/paths';
+import * as Yup from 'yup';
 import { GoogleLoginButton } from './google';
 
 // ----------------------------------------------------------------------
@@ -127,7 +127,7 @@ export default function LoginView() {
         />
       </FormGroup>
 
-      <Link
+      {/* <Link
         href={paths.auth.forgotPassword}
         component={RouterLink}
         variant="body1"
@@ -136,7 +136,7 @@ export default function LoginView() {
         sx={{ alignSelf: 'flex-end', mt: -1 }}
       >
         Forgot password?
-      </Link>
+      </Link> */}
 
       <BaseLoadingButton
         color="primary"
@@ -166,7 +166,7 @@ export default function LoginView() {
     <FormProvider methods={methods} onSubmit={onSubmit}>
       {renderForm}
 
-      {renderFooter}
+      {/* {renderFooter} */}
     </FormProvider>
   );
 }
