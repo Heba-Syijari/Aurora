@@ -17,7 +17,6 @@ import { ConfirmDialog } from 'src/components/dialog';
 import Iconify from 'src/components/iconify';
 import { useBoolean } from 'src/hooks/use-boolean';
 import { RouterLink } from 'src/routes/components';
-import AccountChangePassword from 'src/sections/account/account-change-password';
 
 // ----------------------------------------------------------------------
 
@@ -41,7 +40,6 @@ export default function AccountPopover() {
 
   const popover = usePopover();
   const logoutDialogOpen = useBoolean();
-  const editPasswordDialogOpen = useBoolean();
   const handleLogout = async () => {
     try {
       await logout();
@@ -115,15 +113,6 @@ export default function AccountPopover() {
           ))}
         </Stack>
         <MenuItem
-          onClick={editPasswordDialogOpen.onTrue}
-          sx={{ m: 1, mt: -1, fontWeight: 'fontWeightBold' }}
-        >
-          <Iconify icon="hugeicons:lock-password" />
-          <Typography variant="body1" fontWeight={500}>
-            edit password
-          </Typography>
-        </MenuItem>
-        <MenuItem
           onClick={logoutDialogOpen.onTrue}
           sx={{ m: 1, mt: -1, fontWeight: 'fontWeightBold', color: 'error.main' }}
         >
@@ -134,10 +123,6 @@ export default function AccountPopover() {
         </MenuItem>
       </CustomPopover>
 
-      <AccountChangePassword
-        onClose={editPasswordDialogOpen.onFalse}
-        open={editPasswordDialogOpen.value}
-      />
       <ConfirmDialog
         image={renderImage}
         title="Log Out"
