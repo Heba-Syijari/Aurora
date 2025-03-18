@@ -27,11 +27,6 @@ const OPTIONS = [
     linkTo: paths.dashboard.profile,
     icon: <Iconify icon="solar:user-linear" />,
   },
-  {
-    label: 'Preferences',
-    linkTo: paths.dashboard.preferences,
-    icon: <Iconify icon="healthicons:ui-preferences" />,
-  },
 ];
 
 // ----------------------------------------------------------------------
