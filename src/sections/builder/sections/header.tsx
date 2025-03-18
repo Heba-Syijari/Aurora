@@ -58,10 +58,6 @@ export default function BuilderHeader({
     }
   };
 
-  const onUpgradeClick = () => {
-    router.push(paths.dashboard.subscriptions.root);
-  };
-
   const renderLeft = (
     <Stack spacing={4} flexDirection="row" alignItems="center">
       <Logo
@@ -71,16 +67,6 @@ export default function BuilderHeader({
           color: 'primary.main',
         }}
       />
-      <Button
-        variant="contained"
-        color="primary"
-        startIcon={<Iconify icon="ri:shield-star-line" />}
-        sx={{ px: 2, minWidth: 'unset', borderRadius: (theme) => theme.spacing(1) }}
-        onClick={onUpgradeClick}
-        title="Upgrade your plan"
-      >
-        Upgrade
-      </Button>
     </Stack>
   );
 

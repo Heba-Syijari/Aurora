@@ -29,9 +29,9 @@ import { ReactQueryProvider } from 'src/lib/react-query';
 // ----------------------------------------------------------------------
 
 export const metadata: Metadata = {
-  title: 'CanvaBlocks',
+  title: 'Aurora',
   description:
-    'CanvaBlocks is a service that helps users create websites that cater to variant themes and content. There are several website templates available that come with pre-built pages and features that are tailored to the needs of websites',
+    'Aurora is a service that helps users create websites that cater to variant themes and content. There are several website templates available that come with pre-built pages and features that are tailored to the needs of websites',
   keywords:
     'event calendars,website templates,drag and drop,customizable,responsive design,search engine optimization,seo optimization,mobile-friendly,user-friendly,analytics,social media integration',
   themeColor: '#ffffff',

@@ -1,11 +1,9 @@
-import { AppBar, IconButton, Stack, Toolbar } from '@mui/material';
+import { AppBar, Stack, Toolbar } from '@mui/material';
 import { useTheme } from '@mui/material/styles';
-import Iconify from 'src/components/iconify/iconify';
 import Logo from 'src/components/logo';
 import { useSettingsContext } from 'src/components/settings';
 import { useOffSetTop } from 'src/hooks/use-off-set-top';
 import { useResponsive } from 'src/hooks/use-responsive';
-import { paths } from 'src/routes/paths';
 import { HEADER } from '../config-layout';
 
 // ----------------------------------------------------------------------
@@ -25,23 +23,19 @@ export default function Header() {
 
   const renderContent = (
     <Stack direction="row" alignItems="center" justifyContent="space-between" width={1}>
-      <IconButton
-        component="a"
-        href={paths.dashboard.root}
-        sx={{ borderRadius: theme.spacing(1), px: 2 }}
-      >
+      {/* <Link href="/dashboard">
         <Iconify icon="ri:arrow-left-s-line" color="common.white" />
-      </IconButton>
-      <Stack ml={-10} alignItems="center" justifyContent="center" width={1}>
-        <Logo
-          disabledLink
-          full
-          sx={{
-            height: 35,
-            color: '#fff',
-          }}
-        />
-      </Stack>
+      </Link> */}
+      {/* <Stack ml={-10} alignItems="center" justifyContent="center" width={1}> */}
+      <Logo
+        // disabledLink
+        full
+        sx={{
+          height: 35,
+          color: '#fff',
+        }}
+      />
+      {/* </Stack> */}
     </Stack>
   );
 

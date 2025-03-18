@@ -42,11 +42,6 @@ export function ProjectItem({
   const menus = useMemo(
     () => [
       {
-        label: 'Go To Dashboard',
-        icon: <Iconify icon="tdesign:app" />,
-        onClick: onViewClick,
-      },
-      {
         label: 'Edit',
         icon: <Iconify icon="material-symbols:rebase-edit-outline-rounded" />,
         onClick: onEditClick,
@@ -57,7 +52,7 @@ export function ProjectItem({
         onClick: deleteProjectDialogOpen.onTrue,
       },
     ],
-    [deleteProjectDialogOpen.onTrue, onEditClick, onViewClick]
+    [deleteProjectDialogOpen.onTrue, onEditClick]
   );
 
   const handleDelete = useCallback(async () => {
@@ -90,8 +85,8 @@ export function ProjectItem({
               textDecoration: 'none',
               '& img': { objectFit: 'scale-down!important', maxWidth: 100 },
             }}
-          // component={RouterLink}
-          // href={paths.project(projectId).root}
+            // component={RouterLink}
+            // href={paths.project(projectId).root}
           >
             {getLogo(name, logo)}
           </Avatar>

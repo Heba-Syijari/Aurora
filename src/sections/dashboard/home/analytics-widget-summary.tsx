@@ -5,7 +5,6 @@ import Typography from '@mui/material/Typography';
 import { fShortenNumber } from 'src/utils/format-number';
 // theme
 import { Card } from '@mui/material';
-import { BackgroundPrints } from 'src/layouts/_common';
 import { ColorSchema } from 'src/theme/palette';
 
 // ----------------------------------------------------------------------
@@ -41,13 +40,6 @@ export default function AnalyticsWidgetSummary({
       }}
       {...other}
     >
-      <BackgroundPrints
-        sx={{
-          position: 'absolute',
-          opacity: 0.1,
-          right: 0,
-        }}
-      />
       <Box
         sx={{
           width: 100,

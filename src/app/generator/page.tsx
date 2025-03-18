@@ -4,7 +4,7 @@ import { GeneratorView } from 'src/sections/generator/view';
 // ----------------------------------------------------------------------
 
 export const metadata = {
-  title: 'CanvaBlocks - Generator',
+  title: 'Aurora - Generator',
 };
 
 export default function Page() {

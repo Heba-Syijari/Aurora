@@ -1,6 +1,6 @@
 'use client';
 
-import { Box, Card, Grid, MobileStepper, Stack, Step, StepLabel, Typography } from '@mui/material';
+import { Box, Card, Grid, MobileStepper, Stack, Typography } from '@mui/material';
 import { useMemo } from 'react';
 import Iconify from 'src/components/iconify';
 import { Audience } from '../audience';
@@ -361,7 +361,6 @@ export default function GeneratorView() {
         return null;
     }
   };
-
   const renderFinishStep = (
     <FinishSection onBackClicked={back} onStartGenerateClicked={createProject} loading={loading} />
   );
@@ -372,29 +371,30 @@ export default function GeneratorView() {
         container
         justifyContent="center"
         alignItems="center"
-        height={{ sm: 1, md: '250vh' }}
+        // height={{ sm: 1, md: '250vh' }}
         spacing={2}
       >
         <Grid
           item
           sm={12}
-          md={3.5}
+          md={8.3}
           alignSelf="stretch"
           bgcolor={{ md: 'transparent', xs: '#fff' }}
-          height={1}
-          sx={{}}
+          // height={1}
         >
           <Box
             sx={{
-              position: { lg: 'fixed', md: 'relative' },
+              // position: { lg: 'fixed', md: 'relative' },
+              position: 'relative',
               px: { lg: 2, md: 2, sm: 2, xs: 2 },
-              pt: { lg: 8, md: 2, sm: 2, xs: 2 },
-              zIndex: 1,
-              left: 0,
-              top: -2,
-              maxWidth: { md: 350, xs: 'unset' },
-              height: 1,
-              width: 1,
+              // pt: { lg: 8, md: 2, sm: 2, xs: 2 },
+              // zIndex: 1,
+              // left: 0,
+              // top: -2,
+              // maxWidth: { md: 350, xs: 'unset' },
+              // height: 1,
+              // width: 1,
+              borderRadius: '25px',
             }}
             bgcolor={{ md: '#fff', xs: 'transparent' }}
           >
@@ -422,7 +422,7 @@ export default function GeneratorView() {
                 backButton={undefined}
                 nextButton={undefined}
               />
-              {steps.map((item, i) => (
+              {/* {steps.map((item, i) => (
                 <Step key={i + 1}>
                   <StepLabel
                     sx={{
@@ -453,7 +453,7 @@ export default function GeneratorView() {
                         {renderStepImage(
                           i + 1,
                           // eslint-disable-next-line no-nested-ternary
-                          i === activeStep ? '#4E92FF' : i > activeStep ? '#A9B2BC' : '#1F2024'
+                          i === activeStep ? '#8B5FBF' : i > activeStep ? '#A9B2BC' : '#1F2024'
                         )}
                         {item.label}
                       </Stack>
@@ -468,9 +468,9 @@ export default function GeneratorView() {
                         >
                           <path
                             d="M3 12C3 13.1819 3.23279 14.3522 3.68508 15.4442C4.13738 16.5361 4.80031 17.5282 5.63604 18.364C6.47177 19.1997 7.46392 19.8626 8.55585 20.3149C9.64778 20.7672 10.8181 21 12 21C13.1819 21 14.3522 20.7672 15.4442 20.3149C16.5361 19.8626 17.5282 19.1997 18.364 18.364C19.1997 17.5282 19.8626 16.5361 20.3149 15.4442C20.7672 14.3522 21 13.1819 21 12C21 10.8181 20.7672 9.64778 20.3149 8.55585C19.8626 7.46392 19.1997 6.47177 18.364 5.63604C17.5282 4.80031 16.5361 4.13738 15.4442 3.68508C14.3522 3.23279 13.1819 3 12 3C10.8181 3 9.64778 3.23279 8.55585 3.68508C7.46392 4.13738 6.47177 4.80031 5.63604 5.63604C4.80031 6.47177 4.13738 7.46392 3.68508 8.55585C3.23279 9.64778 3 10.8181 3 12Z"
-                            fill="#4E92FF"
+                            fill="#8B5FBF"
                           />
-                          <path d="M9 12L11 14L15 10" fill="#4E92FF" />
+                          <path d="M9 12L11 14L15 10" fill="#8B5FBF" />
                           <path
                             d="M9 12L11 14L15 10M3 12C3 13.1819 3.23279 14.3522 3.68508 15.4442C4.13738 16.5361 4.80031 17.5282 5.63604 18.364C6.47177 19.1997 7.46392 19.8626 8.55585 20.3149C9.64778 20.7672 10.8181 21 12 21C13.1819 21 14.3522 20.7672 15.4442 20.3149C16.5361 19.8626 17.5282 19.1997 18.364 18.364C19.1997 17.5282 19.8626 16.5361 20.3149 15.4442C20.7672 14.3522 21 13.1819 21 12C21 10.8181 20.7672 9.64778 20.3149 8.55585C19.8626 7.46392 19.1997 6.47177 18.364 5.63604C17.5282 4.80031 16.5361 4.13738 15.4442 3.68508C14.3522 3.23279 13.1819 3 12 3C10.8181 3 9.64778 3.23279 8.55585 3.68508C7.46392 4.13738 6.47177 4.80031 5.63604 5.63604C4.80031 6.47177 4.13738 7.46392 3.68508 8.55585C3.23279 9.64778 3 10.8181 3 12Z"
                             stroke="#EBF3FF"
@@ -483,11 +483,11 @@ export default function GeneratorView() {
                     </Stack>
                   </StepLabel>
                 </Step>
-              ))}
+              ))} */}
             </Stack>
           </Box>
         </Grid>
-        <Grid item sm={12} md={8.5} alignSelf="stretch" height={1} p={4}>
+        <Grid item sm={12} md={8.5} alignSelf="stretch" p={4}>
           <Card
             sx={{
               width: 1,

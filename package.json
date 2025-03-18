@@ -1,8 +1,8 @@
 {
-  "name": "spreadislam-builder",
+  "name": "aurora",
   "author": "Misraj",
   "version": "1.0.0",
-  "description": "CanvaBlocks website builder",
+  "description": "Aurora website builder",
   "private": true,
   "scripts": {
     "dev": "next dev -p 8084",

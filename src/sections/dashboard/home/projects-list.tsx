@@ -71,6 +71,9 @@ export default function ProjectsList({ projects, sx, onDeleteSuccess, isLoading 
           <Typography variant="h5" color="common.black">
             Your Projects
           </Typography>
+          <Typography variant="h6" color="common.black">
+            ( {projects.length} )
+          </Typography>
         </Stack>
 
         <Grid container spacing={3}>

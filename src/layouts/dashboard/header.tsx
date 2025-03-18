@@ -9,13 +9,8 @@ import { useResponsive } from 'src/hooks/use-responsive';
 // api
 // components
 import Logo from 'src/components/logo';
-import { useSettingsContext } from 'src/components/settings';
 //
-import {
-  AccountPopover,
-  SubscriptionExpiration,
-  UserCredits
-} from '../_common';
+import { AccountPopover, SubscriptionExpiration, UserCredits } from '../_common';
 import { HEADER } from '../config-layout';
 
 // ----------------------------------------------------------------------
@@ -26,23 +21,13 @@ type Props = {
 
 export default function Header({ onOpenNav }: Props) {
   const theme = useTheme();
-
-  const settings = useSettingsContext();
-
   const lgUp = useResponsive('up', 'lg');
-
   const offset = useOffSetTop(HEADER.H_DESKTOP);
-
   const offsetTop = offset;
-
   const renderContent = (
     <>
       <Logo sx={{ mr: 2.5 }} />
       <h2>Aurora</h2>
-
-      {/* <Searchbar /> */}
-
-
       <Stack
         flexGrow={1}
         direction="row"
@@ -58,10 +43,7 @@ export default function Header({ onOpenNav }: Props) {
             },
           }}
         />
-
         <UserCredits />
-
-        {/* <NotificationsPopover /> */}
         <AccountPopover />
       </Stack>
     </>
